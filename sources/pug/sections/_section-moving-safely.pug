@@ -1,0 +1,30 @@
+include ../components/_progress-linear
+// Section Moving Safely
+.section.section-lg.bg-default
+  .container
+    .row.row-30.justify-content-center
+      .col-md-8.col-lg-4
+        h6: span.head-text Moving Safely
+        h2
+          span.head-small We Provide Safe
+            br.d-none.d-xl-block
+            =" "
+            | & Secure Moving
+            br.d-none.d-xl-block
+            =" "
+            | Procedures
+      .col-md-8.col-lg-4.align-self-lg-center
+        p Stellas tolerare! Competitions ridetis in cella! Lamias unda in aetheres! Mori nunquam ducunt ad gratis canis. Cum candidatus cadunt, omnes elogiumes acquirere neuter, varius zirbuses.
+      .col-md-8.col-lg-4
+        +progress-linear({
+          title: 'Moving',
+          value: '88'
+        })
+        +progress-linear({
+          title: 'Packing',
+          value: '34'
+        })
+        +progress-linear({
+          title: 'Boxes',
+          value: '66'
+        })

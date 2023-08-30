@@ -1,0 +1,64 @@
+include ../components/_thumbnails
+// Section Gallery Demo
+.section.section-xxs.bg-default
+  +bg-decorate
+  .container-fluid.container-fluid-minus-gutter
+    .row.row-30
+      .col-xl-8.flex-column
+        .slick-slider.carousel-parent.thumb-big-slider(
+        data-arrows='false',
+        data-loop='true',
+        data-autoplay='true'
+        data-dots='false',
+        data-swipe='true',
+        data-items='1',
+        data-xs-items='2',
+        data-sm-items='2',
+        data-md-items='2',
+        data-lg-items='3',
+        data-xl-items='2'
+        data-xxl-items='3'
+        data-lightgallery="group"
+        )
+          .thumb-big-slide.wow.fadeInRightSmall(data-wow-delay='.15s')
+            +thumb-big({
+              imgOriginal: 'gallery-original-01',
+              img: 'gallery-01-400x453',
+              title: 'Personal Furniture Moving'
+            })
+          .thumb-big-slide.wow.fadeInRightSmall(data-wow-delay='.3s')
+            +thumb-big({
+              imgOriginal: 'gallery-original-02',
+              img: 'gallery-02-400x453',
+              title: 'Office Furniture Moving'
+            })
+          .thumb-big-slide.wow.fadeInRightSmall(data-wow-delay='.45s')
+            +thumb-big({
+              imgOriginal: 'gallery-original-03',
+              img: 'gallery-03-400x453',
+              title: 'Quality packing and transporting'
+            })
+          .thumb-big-slide
+            +thumb-big({
+              imgOriginal: 'gallery-original-04',
+              img: 'gallery-04-400x453',
+              title: 'Quality packing and transporting'
+            })
+          .thumb-big-slide
+            +thumb-big({
+              imgOriginal: 'gallery-original-05',
+              img: 'gallery-05-400x453',
+              title: 'Personal Furniture Moving'
+            })
+          .thumb-big-slide
+            +thumb-big({
+              imgOriginal: 'gallery-original-06',
+              img: 'gallery-06-400x453',
+              title: 'Office Furniture Moving'
+            })
+      .col-xl-4.flex-column.text-center.text-xl-left
+        .bg-secondary.section-md
+          .block-md
+            h6: span.head-text Recent work
+            h2 Check out our Gallery.
+            a.button.button-white.button-ujarak(href='our-gallery.html') View gallery

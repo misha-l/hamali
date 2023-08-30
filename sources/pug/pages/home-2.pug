@@ -1,0 +1,65 @@
+extends ../_skeleton
+
+block variables
+  - pageName = 'Home 2'
+
+block page
+  include ../sections/_header-modern
+
+  include ../sections/_section-swiper-classic
+  +swiper-classic([
+    {
+      img: 'slide-04-1894x777',
+      title: 'Moving Every Customer With Care'
+    },
+    {
+      img: 'slide-02-1894x777',
+      title: 'Moving You Toward Your Future'
+    },
+    {
+      img: 'slide-03-1894x777',
+      title: 'Everything, Handled With Care'
+    },
+    {
+      img: 'slide-01-1894x777',
+      title: 'Moving Every Customer With Care'
+    },
+    {
+      img: 'slide-05-1894x777',
+      title: 'Moving You Toward Your Future'
+    }
+  ])( data-loop='false' data-autoplay='7500' data-custom-effect='parallax' class='text-left swiper-modern' )
+
+  include ../sections/_section-welcome-to-moling
+
+  include ../sections/_section-call-to-action-1
+
+  include ../sections/_section-our-services
+
+  include ../sections/_section-helping-you
+
+  include ../sections/_section-sponsors
+
+  hr
+
+  include ../sections/_section-with-counters
+
+  include ../sections/_section-gallery-demo
+
+  include ../sections/_section-parallax-with-video-popup
+
+  include ../sections/_section-team-members
+
+  hr
+
+  include ../sections/_section-moving-safely
+
+  include ../sections/_section-call-to-action
+
+  include ../sections/_section-moving-easy
+
+  hr
+
+  include ../sections/section-newsletter-sig-up
+
+  include ../sections/_footer-classic

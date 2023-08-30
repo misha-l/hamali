@@ -1,0 +1,59 @@
+include ../components/_blogs
+include ../components/_lists
+
+// Blog Aside
+.blog-aside
+  .row.row-30
+    .col-12
+      form.rd-form.search.search-secondary.rd-form-inline
+        .form-wrap
+          label.form-label( for='search-form-input' ) Search
+          input#search-form-input.form-input( type='text' )
+    .col-md-6.col-lg-12
+      .blog-aside-element
+        h4 Latest Posts
+        +post-mini({
+          img: 'post-mini-01-60x61',
+          title: 'Which local areas you are moving'
+        })
+        +post-mini({
+          img: 'post-mini-02-60x61',
+          title: 'Make a choice between moving companies'
+        })
+        +post-mini({
+          img: 'post-mini-03-60x61',
+          title: 'Baby boomer and empty enters on move'
+        })
+    .col-md-6.col-lg-12
+      .blog-aside-element
+        h4 Categories
+        +blog-aside-list([
+          {title: 'Unpacking'},
+          {title: 'Moving Supplies'},
+          {title: 'Pre Packing'},
+          {title: 'Non Allowables'},
+          {title: 'Pack Separately'}
+        ])
+    .col-md-6.col-lg-12
+      a.blog-aside-banner(href='#')
+        +img('blog-aside-01-370x373')
+        .blog-aside-banner-content
+          h3.blog-aside-banner-title Moving
+            br
+            =" "
+            | Always
+            br
+            =" "
+            | Easy.
+    .col-md-6.col-lg-12
+      .blog-aside-element.blog-aside-element-primary.context-dark
+        h4 Tags
+        +list-tags([
+          {title: 'Unpacking'},
+          {title: 'Moving'},
+          {title: 'Pack'},
+          {title: 'Supplies Insurance'},
+          {title: 'Easy'},
+          {title: 'Professionals'},
+          {title: 'Storage'}
+        ])

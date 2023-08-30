@@ -1,0 +1,51 @@
+// Section Header Classic
+header.section.page-header
+  //RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar.rd-navbar-classic(
+    data-layout='rd-navbar-fixed',
+    data-sm-layout= 'rd-navbar-fixed',
+    data-md-layout= 'rd-navbar-fixed',
+    data-md-device-layout='rd-navbar-fixed',
+    data-lg-layout= 'rd-navbar-static',
+    data-lg-device-layout='rd-navbar-static',
+    data-xl-layout= 'rd-navbar-static',
+    data-xl-device-layout='rd-navbar-static',
+    data-xxl-layout='rd-navbar-static',
+    data-xxl-device-layout='rd-navbar-static',
+    data-lg-stick-up-offset='211px',
+    data-xl-stick-up-offset='211px',
+    data-xxl-stick-up-offset='211px',
+    data-lg-stick-up='true',
+    data-xl-stick-up='true',
+    data-xxl-stick-up='true' )
+      .rd-navbar-collapse-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-collapse' ): span
+      .rd-navbar-info-toggle.rd-navbar-fixed-element-2( data-rd-navbar-toggle='.rd-navbar-aside-outer' ): span
+      .rd-navbar-aside-outer.bg-gray-700
+        .rd-navbar-aside
+          p.small
+            span.icon.icon-xs.icon-primary.fa-check-circle.fas
+            =" "
+            span Moling is verified and trusted moving company.
+          =" "
+          a.small.link-inline(href='#') Get Free Estimate
+
+      .rd-navbar-main-outer
+        .rd-navbar-main
+          //RD Navbar Panel
+          .rd-navbar-panel
+            //RD Navbar Toggle
+            button.rd-navbar-toggle( data-rd-navbar-toggle='.rd-navbar-nav-wrap' ): span
+            //RD Navbar Brand
+            .rd-navbar-brand
+              +logo
+          .rd-navbar-main-address.rd-navbar-collapse
+            .rd-navbar-main-address-item.rd-navbar-main-address-item-first
+              include ../components/_email-address
+            .rd-navbar-main-address-item.rd-navbar-main-address-item-average: .rd-navbar-brand: +logo
+            .rd-navbar-main-address-item.rd-navbar-main-address-item-last
+              include ../components/_phone-line
+
+          .rd-navbar-main-element
+            .rd-navbar-nav-wrap
+              +navigation( menu )

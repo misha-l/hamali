@@ -1,0 +1,155 @@
+extends ../_skeleton
+
+block variables
+  - pageName = 'Forms'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  // Section Forms
+  .section.section-lg.bg-default.text-center
+    +bg-decorate
+    .container
+      .row.justify-content-md-center
+        .col-md-9.col-lg-7.col-xl-6
+          h3 Login form
+          .group-custom
+            a.button.button-facebook.button-icon.button-icon-left.button-round( href='#' )
+              span.icon.fa-facebook.fab
+              | Facebook
+            a.button.button-twitter.button-icon.button-icon-left.button-round( href='#' )
+              span.icon.fa-twitter.fab
+              | Twitter
+            a.button.button-google.button-icon.button-icon-left.button-round( href='#' )
+              span.icon.fa-google-plus.fab
+              | Google+
+          .text-decoration-lines
+            span.text-decoration-lines-content or
+
+          //RD Mailform
+          form.rd-form.rd-mailform.rd-form-centered
+            .form-wrap
+              label.form-label( for='login-email' ) E-mail
+              input#login-email.form-input( type='email', name='email', data-constraints='@Email @Required' )
+            .form-wrap
+              label.form-label( for='login-password' ) Password
+              input#login-password.form-input( type='password', name='password', data-constraints='@Required' )
+            button.button.button-block.button-primary( type='submit' ) Enter
+
+  //Contact us
+  .section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-9.col-lg-7.col-xl-6
+          h3 Contact us
+          //RD Mailform
+          form.rd-form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php' )
+            .row.row-narrow.row-20
+              .col-md-6
+                .form-wrap
+                  label.form-label( for='contact-name' ) Your Name
+                  input#contact-name.form-input( type='text', name='name', data-constraints='@Required' )
+
+              .col-md-6
+                .form-wrap
+                  label.form-label( for='contact-phone' ) Phone
+                  input#contact-phone.form-input( type='text', name='phone', data-constraints='@Numeric' )
+
+              .col-12
+                .form-wrap
+                  label.form-label( for='contact-message' ) Your Message
+                  textarea#contact-message.form-input( name='message', data-constraints='@Required' )
+
+              .col-md-6
+                .form-wrap
+                  label.form-label( for='contact-email' ) E-mail
+                  input#contact-email.form-input( type='email', name='email', data-constraints='@Email @Required' )
+
+              .col-md-6
+                button.button.button-block.button-primary( type='submit' ) Send Message
+
+  hr
+
+  //Contact Us
+  .section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-9.col-lg-7.col-xl-6
+          h3 Contact Us (with reCAPTCHA)
+          //RD Mailform
+          form.rd-form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php' )
+            .row.row-sm-bottom.row-20
+              .col-md-6
+                .form-wrap
+                  label.form-label( for='contact-2-name' ) Your Name
+                  input#contact-2-name.form-input( type='text', name='name', data-constraints='@Required' )
+              .col-md-6
+                .form-wrap
+                  label.form-label( for='contact-2-phone' ) Phone
+                  input#contact-2-phone.form-input( type='text', name='phone', data-constraints='@Numeric' )
+              .col-12
+                .form-wrap
+                  label.form-label( for='contact-2-message' ) Your Message
+                  textarea#contact-2-message.form-input( name='message', data-constraints='@Required' )
+              .col-md-6
+                .form-wrap
+                  label.form-label( for='contact-2-email' ) E-mail
+                  input#contact-2-email.form-input( type='email', name='email', data-constraints='@Email @Required' )
+              .col-md-6
+                .form-wrap.form-validation-left.form-validation-captcha
+                  //Google captcha
+                  #captcha1.recaptcha( data-sitekey='6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt', data-auto-size='' )
+              .col-12
+                button.button.button-block.button-primary( type='submit' ) Send Message
+
+  hr
+
+  //Subscribe to Our Newsletter
+  +parallax({
+    img: 'bg-image-01-1894x745.jpg',
+    innerClass: 'section-lg context-dark text-center'
+  }).section
+    .container: .row.justify-content-md-center: .col-md-9.col-lg-8.col-xl-7
+      h3 Subscribe to Our Newsletter
+      p.big Sign up to our newsletter and be the first to know about the latest news, special offers, events, and discounts.
+
+      form.rd-form.rd-mailform.rd-form-inline( data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php' )
+        .form-wrap
+          label.form-label( for='subscribe-form-email' ) Your E-mail
+          input#subscribe-form-email.form-input( type='email', name='email', data-constraints='@Email @Required' )
+        .form-button
+          button.button.button-primary( type='submit' ) Subscribe
+
+  .section.section-lg.bg-default.text-center
+    +bg-decorate
+    .container: .row.justify-content-md-center: .col-md-9.col-lg-8.col-xl-7
+      h3 MailChimp
+      p.big Sign up to our newsletter and be the first to know about news, special offers, events, and discounts.
+
+      //Mailchimp
+      form.rd-form.mailchimp-mailform.rd-form-inline( data-form-output='form-output-global', action='https://templatemonster.us15.list-manage.com/subscribe/post?u=ba5bb362073a413f48e4a7b90&id=8dc95d9dec', method='post' )
+        .form-wrap
+          label.form-label( for='mailchimp-email' ) Enter your e-mail
+          input#mailchimp-email.form-input( type='email', name='email', data-constraints='@Email @Required' )
+        .form-button
+          button.button.button-primary( type='submit' ) Subscribe
+
+  hr
+
+  .section.section-lg.bg-default.text-center
+    +bg-decorate
+    .container: .row.justify-content-md-center: .col-md-9.col-lg-8.col-xl-7
+      h3 Campaign Monitor
+      p.big Sign up to our newsletter and be the first to know about news, special offers, events, and discounts.
+
+      //Campaign Monitor
+      form.rd-form.campaign-mailform.rd-form-inline( data-form-output='form-output-global', action='https://templatermonster.createsend.com/t/j/s/zjjikd/', method='post' )
+        .form-wrap
+          label.form-label( for='campaign-email' ) Enter your e-mail
+          input#campaign-email.form-input( type='email', name='cm-zjjikd-zjjikd', data-constraints='@Email @Required' )
+        .form-button
+          button.button.button-primary( type='submit' ) Subscribe
+
+  include ../sections/_footer-classic

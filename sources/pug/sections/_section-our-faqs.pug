@@ -1,0 +1,37 @@
+// Section Our Faqs
+include ../components/_card
+.section.section-lg.bg-default.text-center
+  +bg-decorate
+  .container
+    h6: span.head-text Our faqs
+    h2 Question Answers
+    .row.row-30.justify-content-center
+      .col-md-10.col-lg-6: +img('about-09-570x423')
+      .col-md-10.col-lg-6
+        #accordion1.card-group-custom.card-group-corporate( role='tablist', aria-multiselectable='false' )
+          +card({
+            parentId: 'accordion1',
+            title: 'Things to expect from your home movers'
+          }).card-corporate
+            p Lorem Ipsum is simply dummy text of not the print type setting industry has been the standard dummy.
+          +card({
+            show: true,
+            parentId: 'accordion1',
+            title: 'Do you provide free packings?'
+          }).card-corporate
+            p Lorem Ipsum is simply dummy text of not the print type setting industry has been the standard dummy.
+          +card({
+            parentId: 'accordion1',
+            title: 'Reliable work from experts of their trade'
+          }).card-corporate
+            p Lorem Ipsum is simply dummy text of not the print type setting industry has been the standard dummy.
+          +card({
+            parentId: 'accordion1',
+            title: 'Which areas do you move?'
+          }).card-corporate
+            p Lorem Ipsum is simply dummy text of not the print type setting industry has been the standard dummy.
+
+    h5
+      span.head-action Don’t hesitate, contact us for help and services.
+        =" "
+        a(href='contacts.html') Book Online

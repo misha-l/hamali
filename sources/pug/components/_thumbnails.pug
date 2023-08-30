@@ -1,0 +1,7 @@
+mixin thumb-big(obj)
+  a.thumb-big(href=`images/${obj.imgOriginal}.jpg` data-lightgallery="item")
+    span.thumb-big-content
+      span.thumb-big-title.heading-3= obj.title
+      span.thumb-big-icon
+        span.fa-angle-right.fas
+    span.thumb-big-img: +img(obj.img)

@@ -1,0 +1,14 @@
+// Newsletter Sig Up
+.section.section-lg.bg-default.text-center
+  +bg-decorate
+  .container
+    h6.wow.fadeInUpSmall(data-wow-delay='.1s'): span.head-text Newsletter signup
+    h2.wow.fadeInUpSmall(data-wow-delay='.3s') Join For New Updates
+    .row.row-lg.justify-content-center
+      .col-lg-10.col-xl-8
+        form.rd-form.rd-mailform.rd-form-inline( data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php' )
+          .form-wrap
+            input#subscribe-form-email.form-input( type='email', name='email', data-constraints='@Email @Required' )
+            label.form-label( for='subscribe-form-email' ) email address
+          .form-button
+            button.button.button-primary.button-ujarak( type='submit' ) Subscribe now

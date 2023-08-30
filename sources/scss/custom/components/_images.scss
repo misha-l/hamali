@@ -1,0 +1,157 @@
+/** @section Images */
+
+/**
+* Standard img style
+*/
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive { width: 100%; }
+
+/**
+* Image wrappers
+*/
+.image-wrap-modern {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 50px;
+
+  &-decor {
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    border: 10px solid $secondary;
+    margin: 40px 40px -40px -40px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .image-wrap-modern {
+    padding-bottom: 60px;
+
+    &-decor {
+      margin: 50px 60px -50px -60px;
+    }
+  }
+}
+
+/**
+* Image shadows
+*/
+.image-with-shadow {
+  box-shadow: $shadow-area-3;
+}
+
+/**
+* Image wrap wide
+*/
+.image-wrap-wide {
+  @include grid-offset(30px);
+}
+
+.image-wrap-wide-achivka {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: $white;
+  box-shadow: $shadow-area-3;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    border: 1px dashed rgba($gray-700, .1);
+    border-radius: 50%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  > span {
+    display: block;
+    line-height: 1.2;
+  }
+}
+
+.image-wrap-wide-achivka-title {
+  font-family: $font-family-sec;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.image-wrap-wide-achivka-count {
+  font-family: $font-family-sec;
+  font-size: 40px;
+  font-weight: 600;
+  color: $gray-700;
+}
+
+.image-wrap-wide-item {
+  img { box-shadow: $shadow-area-3; }
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(lg) {
+  .image-wrap-wide {
+    position: relative;
+    padding-left: 38px;
+  }
+
+  .image-wrap-wide-item-absolute {
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 0;
+    padding-left: ( 176px / 2 );
+
+    img { max-width: none }
+  }
+
+  .image-wrap-wide-achivka {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 176px;
+    height: 176px;
+
+    > span { line-height: 1; }
+  }
+}
+
+// Offset
+h2 + img,
+.heading-2 + img { margin-top: 30px; }
+h3 + figure { margin-top: 20px; }
+h3 + img { margin-top: 42px; }
+
+@include media-breakpoint-up(xl) {
+  h2 + img,
+  .heading-2 + img { margin-top: 50px; }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}

@@ -1,0 +1,186 @@
+/** @section Panel custom */
+
+// Local variables
+$accordion-corporate-color: $gray-600;
+$accordion-corporate-background: $white;
+$accordion-corporate-border: #dedede;
+$accordion-corporate-content-color: $body-color;
+$accordion-corporate-arrow-color: $gray-600;
+$accordion-corporate-arrow-background: $gray-100;
+$accordion-corporate-arrow-active-color: $white;
+$accordion-corporate-arrow-active-background: $primary;
+$accordion-corporate-shadow: -1px 2px 5px 0px rgba(#444953, 0.12);
+$accordion-corporate-border-radius: 0;
+$accordion-corporate-header-padding: 22px 58px 22px 32px;
+$accordion-corporate-content-padding: 0 44px 25px nth($accordion-corporate-header-padding, 4);
+
+// Panel groups
+.card-group-custom {
+  margin-bottom: 0;
+  padding: 30px 20px;
+  background-color: $gray-100;
+
+  .card-header + .collapse > .card-body,
+  .card-header + .collapse > .list-group { border-top: 0; }
+
+  .card + .card { margin-top: 0; }
+}
+
+@include media-breakpoint-up(lg) {
+  .card-group-custom {
+    padding: 30px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card-group-custom {
+    padding: 39px 30px;
+  }
+}
+
+.card-group-custom.card-group-corporate {
+  .card + .card { margin-top: 2px; }
+}
+
+.card-custom {
+  display: block;
+  margin: 0;
+  background: inherit;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+
+  a { display: block; }
+
+  // Panel heading
+  .card-header {
+    padding: 0;
+    border-bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  // Panel contents
+  .card-body {
+    padding: 0;
+    border: 0;
+  }
+
+  .card-title { margin-bottom: 0; }
+}
+
+* + .card-group-custom {
+  margin-top: 15px;
+}
+
+// Panel corporate
+.card-corporate {
+  text-align: left;
+  box-shadow: $accordion-corporate-shadow;
+
+  .card-title a,
+  .card-body {
+    background: $accordion-corporate-background;
+  }
+
+  .card-title a {
+    position: relative;
+    z-index: 1;
+    padding: $accordion-corporate-header-padding;
+    font-family: $font-family-sec;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: $gray-700;
+    transition: 1.3s all ease;
+    border-radius: $accordion-corporate-border-radius $accordion-corporate-border-radius 0 0;
+
+    // Open state
+    .card-arrow {
+      &:after {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    // Collapsed state
+    &.collapsed {
+      border-radius: $accordion-corporate-border-radius;
+      border-bottom-width: 0;
+      color: $accordion-corporate-color;
+
+      .card-arrow {
+        color: $accordion-corporate-arrow-color;
+        background-color: $accordion-corporate-arrow-background;
+
+        &:before,
+        &:after {
+          background: $accordion-corporate-arrow-color;
+        }
+
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  // Panel arrow
+  .card-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    color: $accordion-corporate-arrow-active-color;
+    background-color: $accordion-corporate-arrow-active-background;
+    border-radius: 50%;
+    text-align: center;
+    transition: .33s all ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+      background: $accordion-corporate-arrow-active-color;
+    }
+
+    &::before {
+      width: 8px;
+      height: 2px;
+    }
+
+    &::after {
+      width: 2px;
+      height: 8px;
+    }
+  }
+
+  .collapse {
+    position: relative;
+    z-index: 1;
+    color: $accordion-corporate-content-color;
+    border-radius: 0 0 $accordion-corporate-border-radius $accordion-corporate-border-radius;
+  }
+
+  .card-body {
+    padding: $accordion-corporate-content-padding;
+    font-size: 14px;
+    color: $gray-600;
+  }
+
+  // Media queries
+  @include media-breakpoint-down(md) {
+    .card-title a,
+    .card-body { padding-left: 25px; }
+  }
+}

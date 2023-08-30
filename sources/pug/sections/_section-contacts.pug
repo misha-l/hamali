@@ -1,0 +1,56 @@
+// Section Contacts
+.section.section-lg.bg-default
+  +bg-decorate
+  .container
+    .row.row-30.justify-content-center
+      .col-sm-10.col-md-6.col-lg-5.col-xl-4
+        .contact-info
+          h6: span.head-text Contact us
+          h2 Write us your message.
+          p Tincidunt elit magnis nulla facilisis sagittis maece nass apien nunced  ultrices.
+          ul.list-lg(style="max-width: 250px;")
+            li
+              .unit.align-items-center
+                .unit-left: .svg-icon-wrapper.svg-icon-wrapper-rounded.svg-icon-wrapper-gray-100: +svg-icon({name: 'message'})(class='icon icon-secondary')
+                .unit-body
+                  h5.font-weight-sbold: a( href='mailto:#' ) info@moling.com
+                  p.small.small-md Email address
+            li
+              .unit.align-items-center
+                .unit-left: .svg-icon-wrapper.svg-icon-wrapper-rounded.svg-icon-wrapper-gray-100: +svg-icon({name: 'phone-call'})(class='icon icon-secondary')
+                .unit-body
+                  h5.font-weight-sbold: a( href='mailto:#' ) + 777 444 0000
+                  p.small.small-md Phone line
+            li
+              .unit.align-items-center
+                .unit-left: .svg-icon-wrapper.svg-icon-wrapper-rounded.svg-icon-wrapper-gray-100: +svg-icon({name: 'warehouse'})(class='icon icon-secondary')
+                .unit-body
+                  h5.font-weight-sbold: a(href='#') 88 road broklyn st
+                  p.small.small-md Our address
+
+      .col-sm-10.col-md-6.col-lg-7.col-xl-8
+        //RD Mailform
+        form.rd-mailform.text-left( data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php' )
+          .row.row-30
+            .col-lg-6
+              .form-wrap
+                label.form-label( for='contact-name' ) full name
+                input#contact-name.form-input( type='text', name='name', data-constraints='@Required' )
+            .col-lg-6
+              .form-wrap
+                label.form-label( for='contact-email' ) email address
+                input#contact-email.form-input( type='email', name='email', data-constraints='@Required @Email' )
+            .col-lg-6
+              .form-wrap
+                label.form-label( for='contact-phone' ) phone number
+                input#contact-phone.form-input( type='text', name='phone', data-constraints='@Required @PhoneNumber' )
+            .col-lg-6
+              .form-wrap
+                label.form-label( for='contact-subject' ) subject
+                input#contact-subject.form-input( type='text', name='subject', data-constraints='@Required' )
+            .col-md-12
+              .form-wrap
+                label.form-label( for='contact-message' ) write message
+                textarea#contact-message.form-input( name='message', data-constraints='@Required' )
+            .col-md-12
+              button.button.button-primary.button-ujarak( type='submit' ) Send message

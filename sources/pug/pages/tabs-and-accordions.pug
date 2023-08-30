@@ -1,0 +1,128 @@
+extends ../_skeleton
+include ../components/_card
+
+block variables
+  - pageName = 'Tabs and Accordions'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  //Tabs
+  .section.section-lg.bg-default.text-center
+    +bg-decorate
+    .container
+      .row.justify-content-center
+        .col-xl-10
+          h4 Horizontal Tabs
+          //Bootstrap tabs
+          #tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+            //Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item( role='presentation' ): a.nav-link( href='#tabs-1-1', data-toggle='tab' ) Tab 1
+              li.nav-item( role='presentation' ): a.nav-link( href='#tabs-1-2', data-toggle='tab' ) Tab 2
+              li.nav-item( role='presentation' ): a.nav-link( href='#tabs-1-3', data-toggle='tab' ) Tab 3
+
+            //Tab panes
+            .tab-content
+              #tabs-1-1.tab-pane.fade
+                p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+                p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+
+              #tabs-1-2.tab-pane.fade
+                p The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+                p We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+
+              #tabs-1-3.tab-pane.fade
+                p We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+                p Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+
+  hr
+
+  //Vertical Tabs
+  .section.section-lg.bg-default.text-center
+    +bg-decorate
+    .container
+      h3 Vertical Tabs
+      .row
+        .col-xl-11
+          //Bootstrap tabs
+          #tabs-2.tabs-custom.tabs-vertical.tabs-corporate
+            //Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item( role='presentation' ): a.nav-link.active( href='#tabs-2-1', data-toggle='tab' ) Tab 1
+              li.nav-item( role='presentation' ): a.nav-link( href='#tabs-2-2', data-toggle='tab' ) Tab 2
+              li.nav-item( role='presentation' ): a.nav-link( href='#tabs-2-3', data-toggle='tab' ) Tab 3
+              li.nav-item( role='presentation' ): a.nav-link( href='#tabs-2-4', data-toggle='tab' ) Tab 4
+
+            //Tab panes
+            .tab-content
+              #tabs-2-1.tab-pane.fade.active.show
+                p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+                p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+
+              #tabs-2-2.tab-pane.fade
+                p The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+                p We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+
+              #tabs-2-3.tab-pane.fade
+                p We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+                p Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+
+              #tabs-2-4.tab-pane.fade
+                p We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+                p Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+
+  //Accordion
+  .section.section-lg.bg-gray-100.text-center
+    .container
+      .row.justify-content-center
+        .col-lg-9.col-xl-7
+          h3 Accordion
+          //Bootstrap collapse
+          #accordion1.card-group-custom.card-group-corporate( role='tablist', aria-multiselectable='false' )
+            +card({
+              show: true,
+              parentId: 'accordion1',
+              title: 'Cum vigil ortum, omnes candidatuses magicae neuter, talis cedriumes?'
+            }).card-corporate
+              p Ubi est superbus historia? Competition accelerares, tanquam mirabilis turpis. Nunquam manifestum secula. Cur historia assimilant? Rationes mori! Noster advenas ducunt ad usus. Extum messiss, tanquam noster fortis. Heu, secundus liberi! Ecce, mens! Cur mensa unda? Ubi est castus cacula? Cum elevatus cantare, omnes hibridaes carpseris germanus, bi-color parmaes.
+
+            +card({
+              parentId: 'accordion1',
+              title: 'Ferox, bi-color decors sapienter amor de emeritis, mirabilis gluten. Devatio de germanus fuga, aperto urbs?'
+            }).card-corporate
+              p Rectors sunt amors de primus mortem. Tabess tolerare in dexter gandavum! Rectors studere, tanquam audax pars. Nixuss sunt apolloniatess de talis humani generis. Est noster silva, cesaris. Heu. Equiso, silva, et calceus. Eheu. Detriuss persuadere in vierium! Visuss sunt capios de festus calceus. Domesticus zeta vix promissios lamia est.
+
+            +card({
+              parentId: 'accordion1',
+              title: 'Brevis, primus parss aliquando dignus de gratis, barbatus vortex?'
+            }).card-corporate
+              p Nunquam prensionem nomen. Diatria peregrinationes, tanquam regius fluctus. Raptus, dexter glutens nunquam desiderium de brevis, flavum bulla. Gabaliums trabem, tanquam rusticus pulchritudine. Hydras resistere! Cottas persuadere in bi-color oenipons! Cum plasmator manducare, omnes diatriaes examinare fortis, teres finises.
+
+            +card({
+              parentId: 'accordion1',
+              title: 'Ventuss sunt terrors de neuter lumen?'
+            }).card-corporate
+              p Messis sed mire ducunt ad camerarius advena. A falsis, adiurator neuter elogium. Peritus tumultumques ducunt ad domus. Azureus, emeritis brabeutas etiam transferre de salvus, castus fluctus.
+
+            +card({
+              parentId: 'accordion1',
+              title: 'Cum torus messis, omnes zetaes dignus dexter, secundus acipenseres?'
+            }).card-corporate
+              p A falsis, mortem teres magister. Vigil de alter humani generis, transferre fuga! Neuter genetrixs ducunt ad ignigena. Peritus amicitia acceleratrix carpseriss contencio est. Noster planeta inciviliter talems adgium est. Trabem tandem ducunt ad fatalis fraticinida. Byssuss sunt fidess de pius usus. Idoleums nocere, tanquam audax torus. Trabem aegre ducunt ad noster plasmator. Seculas unda! Ecce, grandis abactor! Raptus hydras ducunt ad nutrix. Hercle, uria pius!, torus! Urbs, assimilatio, et burgus. Primus, regius pess unus locus de flavum, castus fluctui.
+
+            +card({
+              parentId: 'accordion1',
+              title: 'Fluctus observares, tanquam brevis palus?'
+            }).card-corporate
+              p Pol, mirabilis aonides! Pol, fidelis clabulare! Hibridas experimentum! Nunquam demitto consilium. Pars noceres, tanquam grandis terror. Pol, ratione! Cur glos congregabo? Luna, acipenser, et xiphias. Olla, frondator, et accentor. Eheu. Est lotus vita, cesaris. Demissio noceres, tanquam castus lapsus. Sunt calceuses desiderium fatalis, albus terrores. Nobilis mensas ducunt ad adiurator. Pol, a bene lacta. Cursuss nocere! Torquis experimentums, tanquam peritus onus. Ire cito ducunt ad varius magister.
+
+            +card({
+              parentId: 'accordion1',
+              title: 'Advena de superbus vox, demitto historia?'
+            }).card-corporate
+              p Aonidess manducare in lentia! Grandis, fatalis lamias foris prensionem de varius, fidelis equiso.
+
+  include ../sections/_footer-classic

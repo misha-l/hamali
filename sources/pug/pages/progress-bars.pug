@@ -1,0 +1,71 @@
+extends ../_skeleton
+include ../components/_progress-linear
+include ../components/_progress-circle
+include ../components/_counter
+
+block variables
+  - pageName = 'Progress Bars'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  include ../sections/_section-moving-safely
+
+  hr
+
+  //Counters
+  .section.section-lg.bg-accent.text-center
+    +bg-decorate
+    .container
+      .row.row-30.row-lg.justify-content-center.row-bordered-item
+        .col-xs-6.col-md-4.row-bordered-item
+          +counter-modern({
+            icon: 'tap',
+            title: 'Customer Chooses Moling Movers',
+            value: 870
+          })
+        .col-xs-6.col-md-4.row-bordered-item
+          +counter-modern({
+            icon: 'box-2',
+            title: 'Boxes are Successfully Moved',
+            value: 970
+          })
+        .col-xs-6.col-md-4.row-bordered-item
+          +counter-modern({
+            icon: 'smile',
+            title: 'Customers are Satisfied with our Services',
+            value: 420
+          })
+
+  hr
+
+  //Circle Progress Bars
+  .section.section-lg.bg-default.text-center
+    +bg-decorate
+    .container
+      h3 Circle Progress Bars
+      .row.row-30.justify-content-center
+        .col-sm-5.col-lg-3
+          +progress-circle({
+            title:   'Leadership',
+            value:   40
+          })
+        .col-sm-5.col-lg-3
+          +progress-circle({
+            title:   'Management',
+            value:   50
+          })
+        .col-sm-5.col-lg-3
+          +progress-circle({
+            title:   'Innovation and creativity',
+            value:   60
+          })
+        .col-sm-5.col-lg-3
+          +progress-circle({
+            title:   'Resilience',
+            value:   85
+          })
+
+  include ../sections/_footer-classic

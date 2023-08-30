@@ -1,0 +1,137 @@
+/** @section Thumbnails */
+
+/**
+* Figure Light
+*/
+.figure-light figcaption {
+  padding-top: 10px;
+  color: $gray-400;
+}
+
+/**
+* Thumb Default
+*/
+.thumb-big {
+  display: block;
+  position: relative;
+}
+
+.thumb-big-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  opacity: 0;
+  transition: .3s ease-out opacity;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($primary, .95);
+    z-index: -1;
+    opacity: 0;
+    transition: .5s ease-out height, .3s ease-out opacity;
+  }
+}
+
+.thumb-big-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.thumb-big-title {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $white;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: .3s ease-out transform, .3s ease-out opacity;
+}
+
+.thumb-big-icon {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-left: auto;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px;
+  color: $white;
+  background-color: $gray-700;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: .3s ease-out transform, .3s ease-out opacity;
+}
+
+.thumb-big:hover {
+  .thumb-big-content {
+    opacity: 1;
+    &:after {
+      height: 100%;
+      opacity: 1;
+    }
+  }
+  .thumb-big-title,
+  .thumb-big-icon {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  .thumb-big-icon {
+    transition-delay: .3s;
+  }
+}
+
+* + .thumb-big-icon { margin-top: 80px; }
+
+@include media-breakpoint-up(md) {
+  .thumb-big-content { padding: 40px; }
+}
+
+@include media-breakpoint-up(lg) {
+  * + .thumb-big-icon { margin-top: 130px; }
+}
+
+@include media-breakpoint-up(xl) {
+  .thumb-big-title { font-size: 24px; }
+
+  .thumb-big-content { padding: 14%; }
+
+  * + .thumb-big-icon { margin-top: 238px; }
+}
+
+/**
+* Thumbnail Slider
+*/
+.thumb-big-slider {
+  display: flex;
+
+
+  .slick-list {
+    margin: 0 -15px;
+    display: flex;
+    height: 100%;
+  }
+  .slick-track { display: flex; }
+
+  .thumb-big { height: 100%; }
+}
+.thumb-big-slide { padding: 0 15px; }

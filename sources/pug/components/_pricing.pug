@@ -1,0 +1,13 @@
+mixin pricing(obj)
+  - if (obj.text === undefined) obj.text = 'We’re specialized in repairing your '
+  // Service
+  .pricing
+    .pricing-icon
+      .pricing-icon-svg: +svg-icon({name: obj.icon})(class='icon icon-lg')
+      .pricing-icon-shadow
+    h4.pricing-title: a(href='contacts.html')= obj.title
+    h2.pricing-price
+     span.pricing-price-top $
+     span.pricing-price-title= obj.price
+    p.pricing-text= obj.text
+    a.button.button-sm.button-primary.button-ujarak(href='contacts.html') Buy Now

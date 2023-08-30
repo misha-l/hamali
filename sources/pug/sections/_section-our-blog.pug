@@ -1,0 +1,32 @@
+include ../components/_blogs
+// Section Our Blog
+.section.section-lg.bg-default.text-center
+  +bg-decorate
+  .container
+    h6.wow.fadeInUpSmall(data-wow-delay='.1s'): span.head-text our blog
+    h2.wow.fadeInUpSmall(data-wow-delay='.1s') News & Articles
+    .row.row-30.justify-content-center
+      .col-sm-8.col-md-4.wow.fadeInUpSmall(data-wow-delay='.15s')
+        +post({
+          img: 'news-01-370x397',
+          date: '10 Jan',
+          author: 'admin',
+          comments: '0',
+          title: 'Baby Boomer and Empty Nesters on the Move'
+        })
+      .col-sm-8.col-md-4.wow.fadeInUpSmall(data-wow-delay='.3s')
+        +post({
+          img: 'news-02-370x397',
+          date: '09 Jan',
+          author: 'admin',
+          comments: '2',
+          title: 'Our Home Entertainment has Evolved Significantly'
+        })
+      .col-sm-8.col-md-4.wow.fadeInUpSmall(data-wow-delay='.45s')
+        +post({
+          img: 'news-03-370x397',
+          date: '02 Jan',
+          author: 'admin',
+          comments: '3',
+          title: 'Making a Choice Between Moving Companies'
+        })

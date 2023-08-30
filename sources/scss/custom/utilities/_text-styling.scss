@@ -1,0 +1,50 @@
+/** @section Text styling */
+
+// Text styles
+.text-italic { font-style: italic; }
+
+.text-normal { font-style: normal; }
+
+// Text decoration
+.text-underline {
+  box-shadow: $body-color 0px -1px 0px 0px inset;
+}
+
+.text-underline-lg {
+  box-shadow: $body-color 0px -2.5px 0px 0px inset; }
+
+.bg-primary {
+  .text-underline {
+    box-shadow: $white 0px -1px 0px 0px inset;
+  }
+
+  .text-underline-lg {
+    box-shadow: $white 0px -2px 0px 0px inset;
+  }
+}
+
+.text-strike { text-decoration: line-through; }
+
+// Text weight
+.font-weight-thin { font-weight: 100; }
+
+.font-weight-light { font-weight: 300; }
+
+.font-weight-regular { font-weight: 400; }
+
+.font-weight-medium { font-weight: 500; }
+
+.font-weight-sbold { font-weight: 600; }
+
+.font-weight-bold { font-weight: 700; }
+
+.font-weight-ubold { font-weight: 900; }
+
+// Text spacing
+.text-spacing-0 { letter-spacing: 0; }
+.text-spacing-200 { letter-spacing: .2em; }
+
+.text-accent { color: $primary; }
+.text-gray-600 { color: $gray-600; }
+
+.text-height-reset { line-height: 0; }

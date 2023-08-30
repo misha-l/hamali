@@ -1,0 +1,24 @@
+include ../components/_pricing
+// Section Pricing
+.section.section-lg.bg-default
+  +bg-decorate
+  .container
+    .row.row-30
+      .col-sm-6.col-md-4
+        +pricing({
+          icon: 'box-1',
+          title: 'Boxes',
+          price: '4.00'
+        })
+      .col-sm-6.col-md-4
+        +pricing({
+          icon: 'warehouse',
+          title: 'Storage',
+          price: '6.00'
+        })
+      .col-sm-6.col-md-4
+        +pricing({
+          icon: 'shield',
+          title: 'Insurance',
+          price: '8.00'
+        })

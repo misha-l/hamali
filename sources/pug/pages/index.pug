@@ -1,0 +1,56 @@
+extends ../_skeleton
+
+block page
+  include ../sections/_header-classic
+
+  include ../sections/_section-swiper-classic
+  +swiper-classic([
+    {
+      img: 'slide-01-1894x777',
+      title: 'Moving Every Customer With Care'
+    },
+    {
+      img: 'slide-02-1894x777',
+      title: 'Moving You Toward Your Future'
+    },
+    {
+      img: 'slide-03-1894x777',
+      title: 'Everything, Handled With Care'
+    },
+    {
+      img: 'slide-04-1894x777',
+      title: 'Moving Every Customer With Care'
+    },
+    {
+      img: 'slide-05-1894x777',
+      title: 'Moving You Toward Your Future'
+    }
+  ])( data-loop='false' data-custom-effect='parallax' class='text-center' )
+
+  include ../sections/_section-about-us-1
+
+  hr
+
+  include ../sections/_section-sponsors
+
+  include ../sections/_section-our-services
+
+  include ../sections/_section-helping-you
+
+  include ../sections/_section-why-chose
+
+  include ../sections/_section-parallax-with-video-popup
+
+  include ../sections/_section-book-us-now
+
+  include ../sections/_section-our-testimonials
+
+  include ../sections/section-newsletter-sig-up
+
+  hr
+
+  include ../sections/_section-our-blog
+
+  include ../sections/_section-call-to-action
+
+  include ../sections/_footer-classic

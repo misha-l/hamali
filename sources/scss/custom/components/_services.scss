@@ -1,0 +1,245 @@
+/** @section Services */
+
+/**
+* Service box
+*/
+.service {
+  max-width: 291px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 15px 20px;
+  background-color: $white;
+  transition: .3s ease-out background-color, .3s ease-out color;
+}
+
+.service-icon-svg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  fill: $white;
+  background-color: $primary;
+  border-radius: 50%;
+  transform: translateY(0);
+  transition: .3s ease-out all;
+}
+
+.service-icon-shadow {
+  line-height: 0;
+
+  &:before {
+    content: '';
+    width: 75px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: $gray-300;
+    transition: .3s ease-out background-color;
+  }
+}
+
+.service-text {
+  font-family: $font-family-base;
+  font-weight: 400;
+  line-height: (30/16);
+}
+
+.service-divider {
+  font-size: 0;
+  line-height: 0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid $gray-300;
+    opacity: 1;
+    transition: .3s ease-out opacity;
+  }
+}
+
+.service-link {
+  display: inline-block;
+  font-family: $font-family-sec;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  color: $primary;
+  text-transform: uppercase;
+}
+
+.service:hover {
+  color: $white;
+  background-color: $secondary;
+
+  .service-icon-shadow {
+    &:before {
+      background-color: $secondary-dark;
+    }
+  }
+
+  .service-icon-svg {
+    fill: $secondary;
+    background-color: $white;
+    transform: translateY(-10px);
+  }
+
+  .service-divider {
+    &:before {
+      opacity: .15;
+    }
+  }
+
+  .service-title > a,
+  .service-link {
+    @include link($white, $primary);
+  }
+}
+
+* + .service-icon-shadow { margin-top: 10px; }
+
+* + .service-title { margin-top: 20px; }
+
+* + .service-text { margin-top: 20px; }
+
+* + .service-divider { margin-top: 25px; }
+
+* + .service-link { margin-top: 20px; }
+
+@include media-breakpoint-up(lg) {
+  .service {
+    padding: 50px 30px 20px;
+  }
+
+  .service-icon-svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .service-text { padding: 0 45px; }
+
+  * + .service-text { margin-top: 33px; }
+}
+
+/**
+* Single Services
+*/
+.single-service {
+
+  * + .single-service-title { margin-top: 25px; }
+  * + .row { margin-top: 25px; }
+  * .button { margin-top: 25px; }
+  .single-service-title + * { margin-top: 25px; }
+  .row + * { margin-top: 25px; }
+
+  @include media-breakpoint-up(xl) {
+    * + .single-service-title { margin-top: 28px; }
+    * + .row { margin-top: 50px; }
+    * + .button { margin-top: 50px; }
+    .row + * { margin-top: 50px; }
+  }
+}
+
+/**
+* Single Services Aside
+*/
+.single-service-aside {
+  padding: 30px;
+  background-color: $gray-100;
+}
+
+/**
+* Single Services Banner
+*/
+.single-service-banner {
+  display: block;
+  max-width: 310px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  img {
+    transform: scale(1);
+    transition: .3s ease-out transform;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.single-service-banner-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.single-service-banner-title {
+  font-size: 30px;
+  line-height: 1.2;
+  color: $white;
+}
+
+/**
+* Single Service List
+*/
+.single-service-list {
+  max-width: 310px;
+  font-family: $font-family-sec;
+  line-height: 1.2;
+  color: $gray-600;
+
+  .icon {
+    font-size: 16px;
+    margin-right: 20px;
+    transition: .3s ease-out all;
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 22px 20px;
+    background-color: $white;
+    @include link(inherit, $gray-700);
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: $shadow-area-4;
+      opacity: 0;
+      pointer-events: none;
+      transition: .33s ease-out all;
+    }
+
+    &:hover {
+      z-index: 2;
+      &:before { opacity: 1; }
+      .icon { color: $secondary; }
+    }
+  }
+
+  > li + li { margin-top: 2px; }
+}
+
+@include media-breakpoint-up(lg) {
+  .single-service-list {
+    a { padding: 22px 32px; }
+  }
+}

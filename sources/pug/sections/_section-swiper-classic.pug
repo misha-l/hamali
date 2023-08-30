@@ -1,0 +1,54 @@
+mixin swiper-classic(arr)
+  .section.swiper-slider-wrapper
+    .bg-decoration
+      .bg-decoration-item
+      .bg-decoration-item
+      .bg-decoration-item
+      .bg-decoration-item
+      .bg-decoration-item
+    .swiper-container.swiper-slider.main-slider.context-dark&attributes( attributes )
+      .swiper-wrapper
+        each $slide in arr
+          -
+            let string = $slide.title
+
+            let splitString = (string, row) => {
+              let arr = string.split(' '),
+                firstRow = [],
+                secondRow = [];
+
+              arr.forEach((element, index) => {
+                if (index < arr.length - 2) {
+                    firstRow.push(element);
+                  } else {
+                    secondRow.push(element);
+                  }
+              });
+
+              firstRow = firstRow.join(' ');
+              secondRow = secondRow.join(' ');
+
+              if (row === 'last') { return secondRow; }
+
+              return firstRow;
+            }
+
+            let firstRow = splitString(string);
+            let secondRow = splitString(string, 'last');
+
+          .swiper-slide
+            figure.slide-bgimg(style=`background-image:url(images/${$slide.img}.jpg)`)
+              +img($slide.img)(class='entity-img')
+            .container
+              .swiper-slide-content.section-lg
+                +img('logo-small-01-44x54.png')(data-caption-animate='fadeInUpSmall', data-caption-delay='0' data-caption-duration='800')
+                h6( data-caption-animate='fadeInUpSmall', data-caption-delay='200' data-caption-duration='800' ): span.head-text Smooth moving for your family
+                h1( data-caption-animate='fadeInUpSmall', data-caption-delay='300' data-caption-duration='800'  )
+                  span= firstRow
+                  =" "
+                  br.d-none.d-sm-block
+                  span= secondRow
+                a.button.button-primary.button-ujarak( data-custom-scroll-to='our-services' href='#our-services' data-caption-animate='fadeInUpSmall', data-caption-delay='600' data-caption-duration='800' ) Get Started
+      .swiper-pagination
+      .swiper-button-prev.fa-angle-left.fas
+      .swiper-button-next.fa-angle-right.fas

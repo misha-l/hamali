@@ -1,0 +1,92 @@
+/** @section Pagination custom */
+
+// Base styles
+.pagination-classic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  @include group(10px);
+  font-family: $font-family-sec;
+}
+
+.pagination-classic-item {
+  &:nth-child(1) {
+    display: none;
+  }
+}
+
+.pagination-classic-link-prev,
+.pagination-classic-link-next,
+.pagination-classic-link {
+  position: relative;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  border-radius: 50%;
+
+  &, &:focus, &:active {
+    color: $gray-600;
+    background: $gray-100;
+  }
+}
+
+.pagination-classic-link-prev,
+.pagination-classic-link-next {
+  font-size: 20px;
+
+  &.disabled,
+  &.active,
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
+
+  &.disabled {
+    cursor: auto;
+  }
+}
+
+.pagination-classic-link {
+  font-size: 14px;
+  font-weight: 600;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background-color: $secondary;
+  }
+}
+
+@include media-breakpoint-up(xs) {
+
+
+  .pagination-classic-link-prev,
+  .pagination-classic-link-next,
+  .pagination-classic-link {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pagination-classic-item {
+    &:nth-child(1) {
+      display: block;
+    }
+  }
+}
+
+* + .pagination-classic { margin-top: 30px; }
+
+@include media-breakpoint-up(lg) {
+  .pagination-classic {
+    @include group(15px);
+  }
+  * + .pagination-classic { margin-top: 45px; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .pagination-classic { margin-top: 60px; }
+}

@@ -1,0 +1,24 @@
+include ../components/_lists
+// Section With Sponsors
+.section.section-md.bg-default
+  +bg-decorate
+  .container
+    .slick-slider.carousel-parent.brand-slider.text-center(
+    data-arrows='false',
+    data-loop='true',
+    data-autoplay='true'
+    data-dots='false',
+    data-swipe='true',
+    data-items='2',
+    data-xs-items='3',
+    data-sm-items='3',
+    data-md-items='4',
+    data-lg-items='5',
+    data-xl-items='5'
+    data-xxl-items='5'
+    )
+      .brand-slide.wow.fadeInUpSmall(data-wow-delay='.15s'): a.link-brand(href='#'): +img('sponsor-01-117x70.png')
+      .brand-slide.wow.fadeInUpSmall(data-wow-delay='.3s'): a.link-brand(href='#'): +img('sponsor-02-100x58.png')
+      .brand-slide.wow.fadeInUpSmall(data-wow-delay='.45s'): a.link-brand(href='#'): +img('sponsor-03-99x38.png')
+      .brand-slide.wow.fadeInUpSmall(data-wow-delay='.6s'): a.link-brand(href='#'): +img('sponsor-04-66x83.png')
+      .brand-slide.wow.fadeInUpSmall(data-wow-delay='.75s'): a.link-brand(href='#'): +img('sponsor-05-119x33.png')

@@ -1,0 +1,100 @@
+/** @section Icons */
+
+/**
+* Base styles
+*/
+.icon {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+
+  &::before {
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    speak: none;
+    text-transform: none;
+  }
+}
+
+/**
+* Alternate icons
+*/
+.icon-default { color: $gray-700; }
+
+.icon-primary {
+  color: $primary;
+  fill: $primary;
+}
+
+.icon-secondary {
+  color: $secondary;
+  fill: $secondary;
+}
+
+.icon-gray-700 {
+  color: $gray-700;
+  fill: $gray-700;
+}
+
+a.icon-gray-700 {
+  &:hover {
+    color: $primary;
+    fill: $primary;
+  }
+}
+
+/**
+* Icon Shapes
+*/
+.icon-circle { border-radius: 50%; }
+
+/**
+* Icon Sizes
+*/
+.icon-xs { font-size: 13px; } // used
+
+.icon-sm { font-size: 16px; }
+
+.icon-lg { font-size: 22px; } // used
+
+/**
+* Svg icons
+*/
+svg {
+  &.icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  &.icon-lg {
+    width: 52px;
+    height: 52px;
+  }
+
+  &.icon-xl {
+    width: 60px;
+    height: 60px;
+  }
+
+  &.icon-xxl {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+.svg-icon-wrapper {
+  width: 65px;
+  height: 65px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &-rounded {
+    border-radius: 50%;
+  }
+
+  &-gray-100 {
+    background-color: $gray-100;
+  }
+}

@@ -1,0 +1,23 @@
+extends ../_skeleton
+
+block variables
+  - pageName = '404'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  // 404
+  .section-lg.bg-default.text-center
+    +bg-decorate
+    .container
+      .row.justify-content-center
+        .col-md-10.col-lg-9
+          h6: span.head-text You may have mistyped the address or the page may have moved
+          h2 Sorry, but the page was not found
+          .group
+            a.button.button-primary.button-ujarak( href='index.html' ) Go to home page
+            a.button.button-default.button-ujarak( href='contacts.html' ) Contacts
+
+  include ../sections/_footer-classic

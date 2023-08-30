@@ -1,0 +1,32 @@
+include ../components/_teams
+// Section Team Members
+.section.section-lg.bg-default.text-center
+  +bg-decorate
+  .container
+    h6: span.head-text team members
+    h2 Meet our Professionals
+    .row.row-40
+      .col-sm-6.col-md-3.wow.fadeInUpSmall(data-wow-delay='.15s')
+        +team-member({
+          img: 'team-01-270x307',
+          title: 'Jessica Brown',
+          cite: 'Estimater'
+        })
+      .col-sm-6.col-md-3.wow.fadeInUpSmall(data-wow-delay='.3s')
+        +team-member({
+          img: 'team-02-270x307',
+          title: 'Mike Hardson',
+          cite: 'Manager'
+        })
+      .col-sm-6.col-md-3.wow.fadeInUpSmall(data-wow-delay='.45s')
+        +team-member({
+          img: 'team-03-270x307',
+          title: 'Sarah Rose',
+          cite: 'Mover'
+        })
+      .col-sm-6.col-md-3.wow.fadeInUpSmall(data-wow-delay='.6s')
+        +team-member({
+          img: 'team-04-270x307',
+          title: 'John Chris',
+          cite: 'Driver'
+        })

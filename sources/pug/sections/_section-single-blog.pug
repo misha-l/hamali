@@ -1,0 +1,114 @@
+include ../components/_blogs
+
+// Section Blog Posts
+.section.section-lg.bg-default
+  +bg-decorate
+  .container
+    .row.row-30.justify-content-center
+      .col-sm-10.col-md-12.col-lg-8
+        // Single Post
+        .single-post
+          // Single Post Header
+          .single-post-header
+            .post-date
+              span 09
+              span Jan
+            .single-post-img: +img('single-blog-01-770x397')
+          .single-post-content
+            // Single Post Meta
+            ul.single-post-meta
+              li By admin
+              li 2 Comments
+            // Single Post Title
+            h3.single-post-title Home Entertainment has Evolved Significantly
+            p.single-post-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.
+            // Single Post Quote
+            .single-post-quote: h3.single-post-quote-title “We Bring Professionalism To Everything We Do”
+            p.single-post-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like aldus.
+          .single-post-divider
+          // Single Post Info
+          .single-post-info
+            .row.row-10.align-items-center
+              .col-sm-7.col-md-6
+                p.single-post-info-title Tags:
+                ul.single-post-info-list
+                  li: a(href='#') Moving
+                  li: a(href='#') Boxes
+                  li: a(href='#') Insurance
+              .col-sm-5.col-md-6.text-sm-right
+                ul.list-inline.list-inline-sm
+                  li: a.icon.icon-gray-700.fa-twitter.fab(href='#')
+                  li: a.icon.icon-gray-700.fa-facebook-f.fab(href='#')
+                  li: a.icon.icon-gray-700.fa-linkedin-in.fab(href='#')
+                  li: a.icon.icon-gray-700.fa-youtube.fab(href='#')
+          // Single Post Author
+          .single-post-author
+            .single-post-author-inner
+              .unit.unit-spacing-lg.align-items-center.d-block.d-md-flex
+                .unit-left: .single-post-author-img: +img('single-blog-02-170x171')
+                .unit-body
+                  h4.single-post-author-title Christine Eve
+                  p.single-post-author-text Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard dummy text ever sincer condimentum purus.
+          // Single Post Comments
+          .single-post-comment-wrapper
+            h3.single-post-comment-title: span.head-big 2 Comments
+            .single-post-comment
+              .single-post-comment-top
+                .unit.unit-spacing-md
+                  .unit-left: .single-post-comment-img: +img('single-blog-03-111x111')
+                  .unit-body(style='flex-grow: 1')
+                    .row.row-10.align-items-center
+                      .col-xs-8
+                        h5.single-post-comment-name David Martin
+                        ul.single-post-comment-time
+                          li 12 Jan, 2019
+                          li 4:00 pm
+                      .col-xs-4.text-md-right
+                        a.button.button-xs.button-primary.button-ujarak(href='#') Reply
+              .single-post-comment-bottom
+                .unit.unit-spacing-md
+                  .unit-left.d-none.d-xs-block: .single-post-comment-img.hidden: +img('single-blog-03-111x111')
+                  .unit-body: p.single-post-comment-text Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis et aliquet.
+            .single-post-comment-divider
+
+
+            .single-post-comment
+              .single-post-comment-top
+                .unit.unit-spacing-md
+                  .unit-left: .single-post-comment-img: +img('single-blog-04-111x111')
+                  .unit-body(style='flex-grow: 1')
+                    .row.row-10.align-items-center
+                      .col-xs-8
+                        h5.single-post-comment-name Jessica Brown
+                        ul.single-post-comment-time
+                          li 12 Jan, 2019
+                          li 4:00 pm
+                      .col-xs-4.text-md-right
+                        a.button.button-xs.button-primary.button-ujarak(href='#') Reply
+              .single-post-comment-bottom
+                .unit.unit-spacing-md
+                  .unit-left.d-none.d-xs-block: .single-post-comment-img.hidden: +img('single-blog-03-111x111')
+                  .unit-body: p.single-post-comment-text Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis et aliquet.
+
+            .single-post-comment-divider
+          // Single Post Comment Leave
+          .single-post-comment-leave
+            h3.single-post-comment-leave-title: span.head-big Leave a Comment
+            form.rd-mailform.text-left( data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php' )
+              .row.row-30
+                .col-md-6
+                  .form-wrap
+                    label.form-label( for='comments-name' ) full name
+                    input#comments-name.form-input( type='text', name='name', data-constraints='@Required' )
+                .col-md-6
+                  .form-wrap
+                    label.form-label( for='comment-email' ) email address
+                    input#comment-email.form-input( type='email', name='email', data-constraints='@Required @Email' )
+                .col-12
+                  .form-wrap
+                    label.form-label( for='comment-message' ) write message
+                    textarea#comment-message.form-input( name='message', data-constraints='@Required' )
+                .col-12
+                  button.button.button-primary( type='submit' ) Submit Now
+      .col-sm-10.col-md-12.col-lg-4
+        include ../components/_blog-aside

@@ -1,0 +1,47 @@
+include ../components/_lists
+// Section Single Service
+.section.section-lg.bg-default
+  .container
+    .row.row-30.justify-content-center
+      .col-xs-10.col-sm-9.col-md-11.col-lg-7.col-xl-8
+        .single-service
+          +img('services-06-770x467')
+          h2.single-service-title Storage
+          p Tincidunt elit magnis nulla facilisis sagittis maecenas. Sapien nunced amet dolores sit ipsum velit purus aliq massa fringilla leo orcium dolors sit amet elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.
+          .row.row-20
+            .col-md-6
+              +img('services-07-370x359')
+            .col-md-6
+              p There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form.
+              ul.list-marked
+                li: a(href='#') Self-contained time clock
+                li: a(href='#') Scalability of up to 500 employees
+                li: a(href='#') The ability to connect up to 32 time clocks
+                li: a(href='#') Employee self-enrollment
+                li: a(href='#') Backup camera to verify failed punches
+          p Tincidunt elit magnis nulla facilisis sagittis maecenas. Sapien nunced amet dolores sit ipsum velit purus aliq massa fringilla leo orcium dolors sit amet elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          a.button.button-primary.button-ujarak(href='#') Get estimate now
+      .col-xs-10.col-sm-9.col-md-11.col-lg-5.col-xl-4
+        .single-service-aside
+          .row.row-30
+            .col-md-6.col-lg-12
+              +single-service-list([
+                {title: 'Unpacking'},
+                {title: 'Moving Supplies'},
+                {title: 'Pre Packing'},
+                {title: 'Non Allowables'},
+                {title: 'Pack Separately'}
+              ])
+            .col-md-6.col-lg-12
+              a.single-service-banner(href='#')
+                +img('services-08-310x373')
+                .single-service-banner-content
+                  h3.single-service-banner-title Moving
+                    br
+                    =" "
+                    | Always
+                    br
+                    =" "
+                    | Easy.
+            .col-xl-12
+              a.button.button-block.button-primary.button-ujarak(href='#') Our brochure

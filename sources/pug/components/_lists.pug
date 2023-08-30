@@ -1,0 +1,36 @@
+mixin list-features(arr)
+  // List Features
+  ol.list-features&attributes( attributes )
+    each item, index in arr
+      li.wow.fadeInUpSmall(data-wow-delay=`${index/10 * 2}s`)
+        .unit.align-items-center
+          .unit-left.text-height-reset: .list-features-index
+          .unit-body: h5: a(href='services.html')= item.title
+
+mixin list-flex(arr)
+  // List Flex
+  ul.list-flex&attributes( attributes )
+    each item, index in arr
+      li.wow.fadeIn(data-wow-delay=`${index/10*1.5}s`): a.link-brand(href='#'): +img(item.image)
+
+mixin single-service-list(arr)
+  // Single Service List
+  ul.single-service-list&attributes( attributes )
+    each item in arr
+      li: a(href='#')
+        span.icon.fa-angle-right.fas
+        span= item.title
+
+mixin blog-aside-list(arr)
+  // Blog Aside List
+  ul.blog-aside-list&attributes( attributes )
+    each item in arr
+      li: a(href='#')
+        span.icon.fa-angle-right.fas
+        span= item.title
+
+mixin list-tags(arr)
+  // Blog Aside List
+  ul.list-tags&attributes( attributes )
+    each item in arr
+      li: a(href='#')= item.title

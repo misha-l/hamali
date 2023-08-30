@@ -1,0 +1,11 @@
+mixin service(obj)
+  - if (obj.text === undefined) obj.text = 'Phase sit amet do tris lorem sum is simply free.'
+  // Service
+  .service
+    .service-icon
+      .service-icon-svg: +svg-icon({name: obj.icon})(class='icon icon-lg')
+      .service-icon-shadow
+    h4.service-title: a(href='services.html')= obj.title
+    p.service-text= obj.text
+    .service-divider
+    a.service-link(href='services.html') Read More

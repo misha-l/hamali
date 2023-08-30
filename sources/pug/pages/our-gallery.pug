@@ -1,0 +1,13 @@
+extends ../_skeleton
+
+block variables
+  - pageName = 'Our Gallery'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  include ../sections/_section-gallery-grid
+
+  include ../sections/_footer-classic

@@ -1,0 +1,78 @@
+/** @section Links */
+
+/**
+* Standard link style
+*/
+a {
+  transition: $transition-base;
+
+  &,
+  &:focus,
+  &:active,
+  &:hover { text-decoration: $link-decoration; }
+
+  @include link($link-color, $link-hover-color);
+
+  &[href*='tel'],
+  &[href*='mailto'] { white-space: nowrap; }
+}
+
+.link-hover { color: $link-hover-color; }
+
+.link-press { color: $link-press-color; }
+
+/**
+* Link Inline
+*/
+.link-inline {
+  position: relative;
+  display: inline-block;
+  font-family: $font-family-sec;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid;
+    transition: .3s cubic-bezier(0.4, 0, 0.04, 1.13) width;
+  }
+
+  &:hover {
+    &:after {
+      width: 50%;
+    }
+  }
+}
+
+h4 + .link-inline { margin-top: 15px; }
+
+/**
+* Link brand
+*/
+.link-brand {
+  &, &:focus, &:active {
+    opacity: .5;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/**
+* Brands Slider
+*/
+.brand-slider {
+  .slick-list{ margin: 0 -15px; }
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .brand-slide { padding: 0 15px; }
+}

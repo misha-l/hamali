@@ -1,0 +1,27 @@
+include ../components/_services
+// Section Our Services
+.section.section-lg.bg-gray-100.text-center#our-services
+  .container
+    h6: span.head-text Our services
+    h2 What We Do
+    .row.row-2.row-narrow-xxs.justify-content-center
+      .col-xs-6.col-md-5.col-lg-3.wow.fadeInUpSmall(data-wow-delay='.15s')
+        +service({
+          icon: 'box-1',
+          title: 'Packing'
+        })
+      .col-xs-6.col-md-5.col-lg-3.wow.fadeInUpSmall(data-wow-delay='.3s')
+        +service({
+          icon: 'warehouse',
+          title: 'Storage'
+        })
+      .col-xs-6.col-md-5.col-lg-3.wow.fadeInUpSmall(data-wow-delay='.45s')
+        +service({
+          icon: 'shipped',
+          title: 'Transport'
+        })
+      .col-xs-6.col-md-5.col-lg-3.wow.fadeInUpSmall(data-wow-delay='.6s')
+        +service({
+          icon: 'shield',
+          title: 'Insurance'
+        })

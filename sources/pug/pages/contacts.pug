@@ -1,0 +1,15 @@
+extends ../_skeleton
+
+block variables
+  - pageName = 'Contacts'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  include ../sections/_section-contacts
+
+  include ../sections/_section-google-map
+
+  include ../sections/_footer-classic

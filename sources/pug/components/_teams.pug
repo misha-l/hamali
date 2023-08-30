@@ -1,0 +1,12 @@
+mixin team-member(obj)
+  .team-member
+    .team-member-head
+      .team-member-img: a(href='#'): +img(obj.img)
+      ul.team-member-list
+        li: a.icon.fa-twitter.fab(href='#')
+        li: a.icon.fa-facebook-f.fab(href='#')
+        li: a.icon.fa-linkedin-in.fab(href='#')
+        li: a.icon.fa-youtube.fab(href='#')
+    .team-member-footer
+      h5.team-member-title: a(href='#')= obj.title
+      p.team-member-cite= obj.cite

@@ -1,0 +1,66 @@
+/** @section Footers */
+
+/**
+* Footer Classic
+*/
+.footer-classic {
+  font-size: 14px;
+  line-height: ( 21/ 14 );
+  color: $gray-400;
+  background: $gray-700;
+
+  a.icon {
+    @include link($white, $primary);
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  hr {
+    border-color: rgba($white, .05);
+  }
+}
+
+
+.footer-classic-list {
+  a {
+    position: relative;
+    line-height: 1.2;
+    @include link($gray-400, $primary);
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      border-bottom: 1px solid;
+      transition: .3s ease-out width;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  > li + li {
+    margin-top: 12px;
+  }
+}
+
+.footer-classic-address {
+  dt, dd { display: inline-block; }
+  a { @include link($white, $primary) }
+}
+
+.footer-classic-title + * { margin-top: 15px; }
+* + .footer-classic-address { margin-top: 10px; }
+
+@include media-breakpoint-up(lg) {
+  .footer-classic-title + * { margin-top: 26px; }
+  * + .footer-classic-address { margin-top: 16px; }
+}

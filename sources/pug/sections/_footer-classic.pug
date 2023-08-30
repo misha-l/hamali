@@ -1,0 +1,47 @@
+// Section Footer Classic
+footer.footer-classic.context-dark.bg-with-icon
+  +bg-decorate
+  .bg-with-icon-item-1: +img('bg-icon-02-452x555.png')
+  .section.section-lg: .container
+    .row.row-40
+      .col-md-4.col-lg-3.text-center.text-md-leftl
+        +logo
+      .col-8.col-xs-4.col-lg-3
+        h5.footer-classic-titlel Our Contacts
+        p Moling Ltd.
+          br.d-none.d-md-block
+          =" "
+          | 8890 RoadHill St., Suite 100
+          br.d-none.d-md-block
+          =" "
+          | North Downtown, NY 82153
+        .footer-classic-address
+          dl
+            dt Email:
+            dd: a(href='mailto:#') info@moling.com
+          dl
+            dt Tel:
+            dd: a(href='tel:#') +1 800 900 1248
+      .col-6.col-xs-4.col-md-2.col-lg-2
+        h5.footer-classic-title Explore
+        ul.footer-classic-list
+          li: a(href='about.html') About
+          li: a(href='#') Our Team
+          li: a(href='#') Locations
+          li: a(href='our-gallery.html') Gallery
+          li: a(href='blog.html') News & Blog
+      .col-6.col-xs-4.col-md-2.col-lg-2
+        h5.footer-classic-title Legal
+        ul.footer-classic-list
+          li: a(href='#') Press Room
+          li: a(href='contacts.html') Contact
+          li: a(href='#') Term of Use
+          li: a(href='#') Privacy Policy
+      .col-lg-2.text-center.text-lg-right
+        ul.list-inline.list-inline-sm
+          li: a.icon-lg.icon.fa-twitter.fab(href='#')
+          li: a.icon-lg.icon.fa-facebook-f.fab(href='#')
+          li: a.icon-lg.icon.fa-linkedin-in.fab(href='#')
+          li: a.icon-lg.icon.fa-youtube.fab(href='#')
+  .container: hr
+  .section.section-xs.text-center: .container: +rights

@@ -1,0 +1,27 @@
+include ../components/_counter
+// Section Fun Facts
+.section.section-lg.bg-default.text-center.bg-with-icon
+  +bg-decorate
+  .bg-with-icon-item-2: +img('bg-icon-01-818x1004.png')
+  .container
+    h6: span.head-text Fun facts
+    h2 Numbers Speak
+    .row.row-30.row-lg.justify-content-center.row-bordered-item
+      .col-xs-6.col-md-4.row-bordered-item
+        +counter-modern({
+          icon: 'tap',
+          title: 'Customer Chooses Moling Movers',
+          value: 870
+        })(class='wow fadeInUpSmall' data-wow-delay='.15s')
+      .col-xs-6.col-md-4.row-bordered-item
+        +counter-modern({
+          icon: 'box-2',
+          title: 'Boxes are Successfully Moved',
+          value: 970
+        })(class='wow fadeInUpSmall' data-wow-delay='.3s')
+      .col-xs-6.col-md-4.row-bordered-item
+        +counter-modern({
+          icon: 'smile',
+          title: 'Customers are Satisfied with our Services',
+          value: 420
+        })(class='wow fadeInUpSmall' data-wow-delay='.45s')

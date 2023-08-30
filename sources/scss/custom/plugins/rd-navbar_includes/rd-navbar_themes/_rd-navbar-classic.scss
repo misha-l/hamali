@@ -1,0 +1,117 @@
+/**
+*
+* RD Navbar Classic
+* =====================================================
+*/
+.rd-navbar-classic {
+  // Static
+  font-family: $font-family-sec;
+
+  &.rd-navbar-static {
+    border-bottom: 1px solid transparent;
+
+    .rd-navbar-aside-outer,
+    .rd-navbar-main-outer {
+      padding-left: $grid-gutter-width / 2;
+      padding-right: $grid-gutter-width / 2;
+    }
+
+    .rd-navbar-aside-outer {
+      // Accent colors
+      &.bg-gray-700 {
+        a {
+          @include link($white, $primary);
+        }
+      }
+    }
+
+    .rd-navbar-aside,
+    .rd-navbar-main {
+      max-width: $rd-navbar-static-width;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .rd-navbar-aside {
+      padding: 15px 0;
+      text-align: center;
+      .small {
+        font-weight: 600;
+        > span { display: inline-block; }
+        .icon + * { margin-left: 6px; }
+        * + .icon { margin-left: 6px; }
+      }
+    }
+
+    .rd-navbar-main-address {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      flex-basis: 100%;
+      flex-grow: 1;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      &-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+        min-width: 270px;
+        &-average {
+          padding-right: 20px;
+          padding-left: 20px;
+          flex-grow: 2;
+          text-align: center;
+        }
+      }
+
+      * + p,
+      * + span.small-md { margin-top: 5px; }
+    }
+
+    .rd-navbar-main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rd-navbar-panel { display: none; }
+
+    .rd-navbar-main-element {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    * + .rd-navbar-main-element { border-top: 1px solid $gray-200 }
+
+
+    .rd-navbar-brand {
+      > a {
+        display: inline-block;
+      }
+    }
+
+    &.rd-navbar--is-stuck,
+    &.rd-navbar--is-clone {
+
+      box-shadow: -4px 0px 6px 0px rgba($black, 0.09);
+
+      .rd-navbar-main-address,
+      .rd-navbar-aside-outer {
+        display: none;
+      }
+
+      .rd-navbar-nav-item {
+        > .rd-navbar-submenu {
+          margin-top: 17px;
+        }
+      }
+    }
+  }
+}

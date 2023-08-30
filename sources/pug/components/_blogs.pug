@@ -1,0 +1,51 @@
+mixin post(obj)
+  - const date = obj.date.split(' ');
+  // Post
+  a.news(href= links.post)
+    span.news-img: +img(obj.img)
+    span.news-date
+      span= date[0]
+      span= date[1]
+    .news-content
+      ul.news-meta
+        li: span By
+          =" "
+          = obj.author
+        li: span= obj.comments
+          =" "
+          | Comments
+      span.news-title.heading-3: span= obj.title
+
+mixin blog-post(obj)
+  -
+    const date = obj.date.split(' ');
+    obj.text = obj.text || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    obj.link = obj.link || 'Read more'
+    obj.author = obj.author || 'admin'
+    obj.comments = obj.comments || '0'
+
+  // Blog Post
+  .post
+    a.post-header(href= links.post)
+      span.post-date
+        span= date[0]
+        span= date[1]
+      span.post-img: +img(obj.img)
+    .post-content
+      ul.post-meta
+        li By
+          =" "
+          = obj.author
+        li= obj.comments
+          =" "
+          | Comments
+      h3.post-title: a(href= links.post)= obj.title
+      p.post-text= obj.text
+      a.post-link(href= links.post)= obj.link
+
+mixin post-mini(obj)
+  // Blog Post Mini
+  .post-mini
+    .unit.unit-spacing-sm.align-items-center
+      .unit-left: a.post-mini-img(href= links.post): +img(obj.img)
+      .unit-body: a.post-mini-title(href= links.post)=  obj.title

@@ -1,0 +1,16 @@
+/** @section Search */
+
+/**
+*  Search Secondary
+*/
+.search-secondary {
+
+  .form-label,
+  .form-input {
+    font-family: $font-family-sec;
+    font-weight: 500;
+    color: $white;
+  }
+
+  .form-input { background-color: $secondary; }
+}

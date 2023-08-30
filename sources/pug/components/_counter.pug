@@ -1,0 +1,25 @@
+//- Counter
+  @param {object} obj
+  @param {number} obj.value
+  @param {string} [obj.title]
+  @param {string} [obj.postfix]
+  @param {number} [obj.duration]
+mixin counter( obj )
+  //Counter
+  .box-counter&attributes( attributes )
+    .box-counter-main
+      .counter( data-speed= obj.duration )= obj.value
+      if ( obj.postfix )
+        .counter-postfix= obj.postfix
+
+    if ( obj.title )
+      .box-counter-divider
+      p.box-counter-title= obj.title
+
+mixin counter-modern( obj )
+  //Counter
+  .box-counter-modern&attributes( attributes )
+    +svg-icon({name: obj.icon})(class='icon icon-xl icon-primary')
+    .box-counter-modern-main
+      .counter( data-speed= obj.duration )= obj.value
+      p.box-counter-modern-title= obj.title
